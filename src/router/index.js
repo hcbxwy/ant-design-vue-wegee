@@ -36,13 +36,22 @@ const routes = [
     children: [
       {
         path: "/",
-        redirect: "/index"
+        redirect: "/dashboard"
       },
       {
-        path: "/index",
-        name: "index",
-        component: () =>
-          import(/* webpackChunkName: "index" */ "../views/Index")
+        path: "/dashboard",
+        name: "dashboard",
+        component: { render: h => h("router-view") },
+        children: [
+          {
+            path: "/dashboard",
+            name: "index",
+            component: () =>
+              import(
+                /* webpackChunkName: "dashboard" */ "../views/Dashboard/Index"
+              )
+          }
+        ]
       }
     ]
   }
