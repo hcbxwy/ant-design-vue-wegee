@@ -1,7 +1,12 @@
 <template>
   <div>
     <a-layout id="components-layout-demo-side" style="min-height: 100vh">
-      <a-layout-sider :trigger="null" collapsible v-model="collapsed">
+      <a-layout-sider
+        :trigger="null"
+        collapsible
+        v-model="collapsed"
+        width="256px"
+      >
         <div class="logo" />
         <Menu />
       </a-layout-sider>
@@ -22,6 +27,7 @@
         </a-layout-footer>
       </a-layout>
     </a-layout>
+    <SettingDrawer />
   </div>
 </template>
 
@@ -29,6 +35,7 @@
 import Header from "./Header";
 import Menu from "./Menu";
 import Footer from "./Footer";
+import SettingDrawer from "../components/SettingDrawer";
 export default {
   data() {
     return {
@@ -38,7 +45,8 @@ export default {
   components: {
     Header,
     Menu,
-    Footer
+    Footer,
+    SettingDrawer
   }
 };
 </script>

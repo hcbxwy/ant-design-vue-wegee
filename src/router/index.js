@@ -32,7 +32,7 @@ const routes = [
   {
     path: "/",
     component: () =>
-      import(/* webpackChunkName: "layout" */ "../layouts/GlobalLayout"),
+      import(/* webpackChunkName: "layout" */ "../layouts/BasicLayout"),
     children: [
       {
         path: "/",
