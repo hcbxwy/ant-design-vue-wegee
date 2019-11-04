@@ -15,7 +15,6 @@
       <div>
         <h2>整体风格定制</h2>
         <a-radio-group
-          :value="$router.query.navTheme || 'dark'"
           @change="e => handleSettingChange('navTheme', e.target.value)"
         >
           <a-radio value="dark">黑色</a-radio>
@@ -23,7 +22,6 @@
         </a-radio-group>
         <h2>导航模式定制</h2>
         <a-radio-group
-          :value="$router.query.navLayout || 'left'"
           @change="e => handleSettingChange('navLayout', e.target.value)"
         >
           <a-radio value="left">左侧</a-radio>
